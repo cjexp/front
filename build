@@ -2,6 +2,6 @@
 set -e
 cd $( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )
 LD="-X 'main.build=$(date -u) $(git rev-parse HEAD)'"
-GOOS=linux GOARCH=amd64 go build -v -ldflags="$LD " -o bin/build/site .
+GOOS=linux GOARCH=amd64 CC=musl-gcc go build -v -ldflags="$LD external -extldflags '-static'" -o bin/build/site .
 asset/taskforce prod
 cat asset.zip >> bin/build/site
