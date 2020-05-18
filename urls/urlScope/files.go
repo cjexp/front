@@ -2,21 +2,19 @@ package urlScope
 
 import (
 	"html/template"
-	"strings"
 
 	"github.com/cjexp/front/urls"
+	"github.com/cjexp/front/urls/urlScope/internal"
 )
 
 type Files struct{}
 
-func (f Files) f(src, replacement string) template.HTMLAttr {
-	return template.HTMLAttr(strings.Replace(src, "*filepath", replacement, 1))
+func (_ Files) Fonts(filepath string) template.HTMLAttr {
+	return internal.ReplaceFilePath(urls.FontsFiles, filepath)
 }
-
-func (f Files) Fonts(filepath string) template.HTMLAttr { return f.f(urls.FontsFiles, filepath) }
-func (f Files) Javascript(filepath string) template.HTMLAttr {
-	return f.f(urls.JavascriptFiles, filepath)
+func (_ Files) Javascript(filepath string) template.HTMLAttr {
+	return internal.ReplaceFilePath(urls.JavascriptFiles, filepath)
 }
-func (f Files) Stylesheet(filepath string) template.HTMLAttr {
-	return f.f(urls.StylesheetFiles, filepath)
+func (_ Files) Stylesheet(filepath string) template.HTMLAttr {
+	return internal.ReplaceFilePath(urls.StylesheetFiles, filepath)
 }
