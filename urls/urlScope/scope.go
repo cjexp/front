@@ -1,13 +1,13 @@
-package urls
+package urlScope
 
 import (
 	"html/template"
 )
 
 type UrlScope struct {
-	Home     HomeUrlScope
-	FlashBag FlashBagUrlScope
-	Files    FilesUrlScope
+	Home     Home
+	FlashBag FlashBag
+	Files    Files
 }
 
 func RegisterUrlScope(m template.FuncMap) {
