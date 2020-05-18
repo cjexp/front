@@ -1,0 +1,11 @@
+{{ define "content" }}
+    {{ $flashbag := flashbag . }}
+    <h1>{{ .Title }}</h1>
+    {{ $flashbag.Success "success" }}
+    {{ $flashbag.Info "info" }}
+    {{ $flashbag.Warning "warning" }}
+    {{ $flashbag.Error "error" }}
+    {{ with .Local }}
+        <a href="{{ .TestUrl }}">Test Flash Bag</a>
+    {{ end }}
+{{ end }}

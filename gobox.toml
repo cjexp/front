@@ -1,3 +1,5 @@
+goCmd = "gogo"
+
 [[module]]
 repo = "github.com/cjtoolkit/ignition/generate"
 tag = "c0064d719d1437e77f395f851ca768207d5f3fff"
