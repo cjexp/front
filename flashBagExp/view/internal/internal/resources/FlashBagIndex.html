@@ -5,7 +5,5 @@
     {{ $flashbag.Info "info" }}
     {{ $flashbag.Warning "warning" }}
     {{ $flashbag.Error "error" }}
-    {{ with .Local }}
-        <a href="{{ $urlScope.Test }}">Test Flash Bag</a>
-    {{ end }}
+    <a href="{{ $urlScope.Test }}">Test Flash Bag</a>
 {{ end }}
