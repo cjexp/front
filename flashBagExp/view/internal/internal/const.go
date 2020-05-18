@@ -4,8 +4,9 @@ package internal
 
 const (
 	// Source: resources/FlashBagIndex.html
-	FlashBagIndex = `H4sIAAAAAAAC/2yPsWoDMRBEe3/FsKSWcRvOVxgSSG1DauW8uhOIVZB0pFj234NsYgK+ah/MY9hR
-xZVDFAZNWRpLI5jtAEAVLyH5unz5Ga9HPNjBrIdrSecpf3MP15Kqe+/Gyc9/DcNyGFXhLrElhtmw
-Xw7jU7c7r9PEtYLqHTY/cB8SMihKyNv5py8SZQb93GHbeislFxD38zAGj6VwONL/Ve7CtcGMxhvc
-tuHk52Hvx50qWK4w+w0AAP//V5Sya0ABAAA=`
+	FlashBagIndex = `H4sIAAAAAAAC/2yQwWoDIRiE732KQXqtkmswHlJS6DmBno37u1o2uqhLA+K7l82moaV78oMZh5m/
+VnRkfSAwE0OhUBhaewKAWvFsB53dWffY7vBgjtZmcUrD0cSRZnFKQ+Zvs2Ov+58E6TaqVvCTLwOh
+NSncRv3L5sfJGMoZLC+w2oC/BxvBfLBxXf/QKfjQg30tsO46pBQTGM3PwyHHpdWNNVwiu2O/F/IT
+5YLWmLrBbSf2updCLz+luEesRrlSxrwVovfFTWdu4kWYT7qOwqYYiiiJSFx0LpSEvZ/wcB2Zkh5m
+0DnvmNUZVr+Y2BFTUniFY5ySIbzGjv62qBUUOrT2HQAA///Gc2Yg2wEAAA==`
 )
