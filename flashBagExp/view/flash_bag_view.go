@@ -7,7 +7,6 @@ import (
 
 	"github.com/cjexp/base/utility/loggers"
 	"github.com/cjexp/front/flashBagExp/view/internal"
-	"github.com/cjexp/front/urls"
 	"github.com/cjtoolkit/ctx"
 )
 
@@ -37,20 +36,5 @@ func initFlashBagView(context ctx.BackgroundContext) FlashBagView {
 func (f flashBagView) ExecIndex(context ctx.Context) {
 	context.SetTitle("Flash Bag Test")
 
-	type local struct {
-		TestUrl template.HTMLAttr
-	}
-
-	type c struct {
-		ctx.Context
-
-		Local local
-	}
-
-	f.errorService.CheckErrorAndLog(f.indexTpl.Execute(context.ResponseWriter(), c{
-		Context: context,
-		Local: local{
-			TestUrl: urls.FlashBagTest,
-		},
-	}))
+	f.errorService.CheckErrorAndLog(f.indexTpl.Execute(context.ResponseWriter(), context))
 }

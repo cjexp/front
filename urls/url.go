@@ -1,7 +1,7 @@
 package urls
 
 const (
-	Index = "/"
+	HomeIndex = "/"
 
 	// FlashBag
 	FlashBagIndex = "/flashbag"

@@ -3,6 +3,8 @@ package master
 import (
 	"html/template"
 
+	"github.com/cjexp/front/urls"
+
 	"github.com/cjexp/base/utility/embedder"
 	"github.com/cjexp/front/master/internal"
 	"github.com/cjexp/front/master/util"
@@ -25,6 +27,7 @@ func buildMasterTemplate(context ctx.BackgroundContext) *template.Template {
 
 	util.RegisterFlashBag(context, maps)
 	util.RegisterCsrf(context, maps)
+	urls.RegisterUrlScope(maps)
 
 	name, tpl := "Master", embedder.DecodeValue(internal.Master)
 	return template.Must(template.New(name).Funcs(maps).Parse(string(tpl)))
