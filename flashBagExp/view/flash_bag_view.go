@@ -14,23 +14,16 @@ type FlashBagView interface {
 	ExecIndex(ctx ctx.Context)
 }
 
-func GetFlashBagView(context ctx.BackgroundContext) FlashBagView {
-	type c struct{}
-	return context.Persist(c{}, func() (interface{}, error) {
-		return initFlashBagView(context), nil
-	}).(FlashBagView)
+func NewFlashBagView(context ctx.BackgroundContext) FlashBagView {
+	return flashBagView{
+		indexTpl:     internal.BuildIndexPage(context),
+		errorService: loggers.GetErrorService(context),
+	}
 }
 
 type flashBagView struct {
 	indexTpl     *template.Template
 	errorService loggers.ErrorService
-}
-
-func initFlashBagView(context ctx.BackgroundContext) FlashBagView {
-	return flashBagView{
-		indexTpl:     internal.BuildIndexPage(context),
-		errorService: loggers.GetErrorService(context),
-	}
 }
 
 func (f flashBagView) ExecIndex(context ctx.Context) {

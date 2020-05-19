@@ -15,7 +15,7 @@ type FlashBagController struct {
 
 func NewFlashBagController(context ctx.BackgroundContext) FlashBagController {
 	return FlashBagController{
-		view:     view.GetFlashBagView(context),
+		view:     view.NewFlashBagView(context),
 		flashBag: cookie.GetFlashBag(context),
 	}
 }
