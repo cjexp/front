@@ -1,0 +1,24 @@
+{{ define "content" -}}
+    {{ $urls := urls }}
+
+    <p>Welcome to CJ's open-source experiment.</p>
+
+    <div class="row mt-4">
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Flash Bag Test</h5>
+                    <p class="card-text">Testing alert system by saving the data to the session and receiving the data
+                        after redirect.</p>
+                    <a href="{{ $urls.FlashBag.Index }}" class="card-link"><i class="fas fa-link"></i> Link</a>
+                    <a href="https://github.com/cjexp/front/tree/master/flashBagExp" class="card-link">
+                        <i class="fas fa-code"></i> Source Code
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3"></div>
+    </div>
+{{ end }}

@@ -7,7 +7,6 @@ package view
 
 import (
 	ctx "github.com/cjtoolkit/ctx"
-	model "github.com/cjexp/front/homePage/model"
 	gomock "github.com/golang/mock/gomock"
 	reflect "reflect"
 )
@@ -36,13 +35,13 @@ func (m *MockHomeView) EXPECT() *MockHomeViewMockRecorder {
 }
 
 // ExecIndexView mocks base method
-func (m *MockHomeView) ExecIndexView(context ctx.Context, data model.Index) {
+func (m *MockHomeView) ExecIndexView(context ctx.Context) {
 	m.ctrl.T.Helper()
-	m.ctrl.Call(m, "ExecIndexView", context, data)
+	m.ctrl.Call(m, "ExecIndexView", context)
 }
 
 // ExecIndexView indicates an expected call of ExecIndexView
-func (mr *MockHomeViewMockRecorder) ExecIndexView(context, data interface{}) *gomock.Call {
+func (mr *MockHomeViewMockRecorder) ExecIndexView(context interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExecIndexView", reflect.TypeOf((*MockHomeView)(nil).ExecIndexView), context, data)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExecIndexView", reflect.TypeOf((*MockHomeView)(nil).ExecIndexView), context)
 }

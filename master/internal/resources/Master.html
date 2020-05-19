@@ -1,11 +1,11 @@
-{{ $filesUrlScope := urls.Files }}<!DOCTYPE html>
+{{ $urls := urls }}<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ .Title }} | CJ Experiment</title>
-    <link rel="stylesheet" href="{{ $filesUrlScope.Stylesheet "styles.css" }}">
+    <link rel="stylesheet" href="{{ $urls.Files.Stylesheet "styles.css" }}">
     <link rel="apple-touch-icon" sizes="180x180" href="https://www.cj-jackson.com/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://www.cj-jackson.com/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://www.cj-jackson.com/favicon/favicon-16x16.png">
@@ -17,9 +17,11 @@
 </head>
 <body>
 <div class="container mb-3">
+    <a class="btn btn-primary float-right" href="{{ $urls.Home.Index }}"><i class="fas fa-home"></i></a>
+    <h1 class="mt-4 mb-4">{{ .Title }}</h1>
     {{- block "content" . }}{{ end -}}
 </div>
-<script type="module" src="{{ $filesUrlScope.Javascript "main.js" }}"></script>
+<script type="module" src="{{ $urls.Files.Javascript "main.js" }}"></script>
 {{- block "javascript" . }}{{ end -}}
 </body>
 </html>

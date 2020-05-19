@@ -1,9 +1,8 @@
 package controller
 
 import (
-	"github.com/cjtoolkit/ctx"
-	"github.com/cjexp/front/homePage/model"
 	"github.com/cjexp/front/homePage/view"
+	"github.com/cjtoolkit/ctx"
 )
 
 type HomeController struct {
@@ -15,5 +14,5 @@ func GetHomeController(context ctx.BackgroundContext) HomeController {
 }
 
 func (h HomeController) Index(context ctx.Context) {
-	h.view.ExecIndexView(context, model.Index{Message: "Hello World"})
+	h.view.ExecIndexView(context)
 }
