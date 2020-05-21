@@ -2,6 +2,8 @@ import nodeResolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import { terser } from 'rollup-plugin-terser';
 import json from '@rollup/plugin-json';
+import vue from 'rollup-plugin-vue';
+import replace from '@rollup/plugin-replace';
 
 export default {
     input: {
@@ -13,10 +15,14 @@ export default {
         globals: [],
     },
     plugins: [
+        vue(),
         json(),
         nodeResolve(),
         commonjs(),
-        terser()
+        terser(),
+        replace({
+            'process.env.NODE_ENV': JSON.stringify( process.env.BUILD )
+        })
     ],
     external: []
 }
