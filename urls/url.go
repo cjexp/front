@@ -7,6 +7,9 @@ const (
 	FlashBagIndex = "/flashbag"
 	FlashBagTest  = "/flashbag/test"
 
+	// Vue Experiment
+	VueAlert = "/vue/alert"
+
 	// Files
 	FontsFiles      = "/fonts/*filepath"
 	JavascriptFiles = "/javascript/*filepath"

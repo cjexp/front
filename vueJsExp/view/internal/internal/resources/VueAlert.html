@@ -1,0 +1,9 @@
+{{ define "content" }}
+    <div id="vueAlert">
+        <p>If you are seeing this message, it's means you haven't got JavaScript Enabled</p>
+    </div>
+{{ end }}
+
+{{ define "javascript" }}
+    <script type="module" src="{{ urls.Files.Javascript "vue/alert.js" }}"></script>
+{{ end }}

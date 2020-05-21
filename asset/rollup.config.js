@@ -8,6 +8,8 @@ import replace from '@rollup/plugin-replace';
 export default {
     input: {
         'main': 'dev/javascript/main.js',
+
+        'vue/alert': 'dev/javascript/vue/alert.js'
     },
     output: {
         dir: 'live/javascript',

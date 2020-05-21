@@ -8,6 +8,7 @@ type UrlScope struct {
 	Home     Home
 	FlashBag FlashBag
 	Files    Files
+	Vue      Vue
 }
 
 func RegisterUrlScope(m template.FuncMap) {

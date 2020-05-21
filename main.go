@@ -5,13 +5,13 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/cjexp/front/flashBagExp"
-
 	"github.com/cjexp/base/utility/command/param"
 	"github.com/cjexp/base/utility/router"
 	"github.com/cjexp/front/errorPage"
 	"github.com/cjexp/front/fileServer"
+	"github.com/cjexp/front/flashBagExp"
 	"github.com/cjexp/front/homePage"
+	"github.com/cjexp/front/vueJsExp"
 	"github.com/cjtoolkit/ctx"
 )
 
@@ -29,6 +29,7 @@ func boot() (http.Handler, param.Param) {
 	errorPage.Boot(context)
 	fileServer.Boot(context)
 	flashBagExp.Boot(context)
+	vueJsExp.Boot(context)
 
 	homePage.Boot(context)
 
