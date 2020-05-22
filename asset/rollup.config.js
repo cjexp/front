@@ -9,7 +9,8 @@ export default {
     input: {
         'main': 'dev/javascript/main.js',
 
-        'vue/alert': 'dev/javascript/vue/alert.js'
+        'vue/address': 'dev/javascript/vue/address.js',
+        'vue/alert': 'dev/javascript/vue/alert.js',
     },
     output: {
         dir: 'live/javascript',

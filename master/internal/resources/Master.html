@@ -18,12 +18,13 @@
 </head>
 <body>
 <div class="container mb-3">
-    <div class="float-right">
-        <a class="btn btn-primary" href="https://github.com/cjexp" data-toggle="tooltip" title="Github"><i class="fab fa-github"></i></a>
-        <a class="btn btn-primary" href="{{ $urls.Home.Index }}" data-toggle="tooltip" title="Home"><i class="fas fa-home"></i></a>
+    <div id="siteHeader">
+        <div class="float-right">
+            <a class="btn btn-primary" href="https://github.com/cjexp" data-toggle="tooltip" title="Github"><i class="fab fa-github"></i></a>
+            <a class="btn btn-primary" href="{{ $urls.Home.Index }}" data-toggle="tooltip" title="Home"><i class="fas fa-home"></i></a>
+        </div>
+        <h1 class="mt-4 mb-4">{{ .Title }}</h1>
     </div>
-
-    <h1 class="mt-4 mb-4">{{ .Title }}</h1>
     {{- block "content" . }}{{ end -}}
 </div>
 <script type="module" src="{{ $urls.Files.Javascript "main.js" }}"></script>

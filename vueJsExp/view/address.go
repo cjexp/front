@@ -1,3 +1,5 @@
+//go:generate gobox tools/easymock
+
 package view
 
 import (
@@ -25,6 +27,6 @@ type addressView struct {
 }
 
 func (a addressView) ExecAddressView(context ctx.Context) {
-	context.SetTitle("Vue Address")
+	context.SetTitle("Vue Address Label Generator")
 	a.errorService.CheckErrorAndLog(a.addressTemplate.Execute(context.ResponseWriter(), context))
 }
