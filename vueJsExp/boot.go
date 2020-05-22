@@ -7,7 +7,12 @@ import (
 )
 
 func Boot(context ctx.BackgroundContext) {
-	bootAlertController{
+	bootAddress{
+		addressController: controller.NewAddressController(context),
+		router:            router.GetRouter(context),
+	}.boot()
+
+	bootAlert{
 		alertController: controller.NewAlertController(context),
 		router:          router.GetRouter(context),
 	}.boot()

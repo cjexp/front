@@ -7,12 +7,12 @@ import (
 	"github.com/cjtoolkit/ctx"
 )
 
-type bootAlertController struct {
+type bootAlert struct {
 	alertController controller.AlertController
 	router          router.Router
 }
 
-func (b bootAlertController) boot() {
+func (b bootAlert) boot() {
 	b.router.GET(urls.VueAlert, func(context ctx.Context, params router.Params) {
 		b.alertController.Index(context)
 	})

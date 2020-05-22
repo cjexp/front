@@ -25,6 +25,6 @@ type alertView struct {
 }
 
 func (a alertView) ExecAlertView(context ctx.Context) {
-	context.SetTitle("Alert")
+	context.SetTitle("Vue Alert")
 	a.errorService.CheckErrorAndLog(a.alertTemplate.Execute(context.ResponseWriter(), context))
 }

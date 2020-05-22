@@ -3,6 +3,13 @@
 package internal
 
 const (
+	// Source: resources/VueAddress.html
+	VueAddress = `H4sIAAAAAAAC/6SRwWrrMBBF9/6KQZts3rP2xTaUkpZmmy+YSGNbwZaMZiQSTP692EmabNpNl+IO
+9x5x5hkstc4TKBO8kBcFl0sBAFBZl8HZWuVEr9ZGYlbNmqzp1Hy2cA4JMBIwkfMdSO8YRmLGjv6B
+k83yQs/rXY+Z/EagCwI7zLg30U0CW4+HgWylp2t5pa3LTVHcRh6DCH2ktla9yMQvWndO+nQoTRi1
+OdJp0m0MXrREIj0iC0WdE+14e5pUUzkwAzLXqkWGFv+bYEk1lXYNfATYhxQNwVuwVGm8g9yJ/kiB
+zCTaUtZHzMjrtxe036l237c/080zkLeLsOJJ5GPl4fLWJOeJajUGmwZSwNHUap4hxYHLdzcQl0+r
+i3eNV/HlkZeuBe2aPm1/BQAA///vmEatQwIAAA==`
 	// Source: resources/VueAlert.html
 	VueAlert = `H4sIAAAAAAAC/6SRsW7rMAxFd38FoSXLe9Ze2AaKIi2aNV/ASLStwJYMkRYSGPn3Qk7SZGmXjhKJ
 ew9xlgUstc4TKBO8kBcFl0sBAFBZl8DZWqWZXgeKopr1f51NzWcL5zADRgImcr4D6R3DSMzY0T9w

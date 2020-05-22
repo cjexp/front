@@ -6,9 +6,10 @@
 package view
 
 import (
+	reflect "reflect"
+
 	ctx "github.com/cjtoolkit/ctx"
 	gomock "github.com/golang/mock/gomock"
-	reflect "reflect"
 )
 
 // MockHomeView is a mock of HomeView interface
