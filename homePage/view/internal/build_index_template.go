@@ -6,9 +6,9 @@ import (
 	"github.com/cjexp/base/utility/embedder"
 	"github.com/cjexp/front/homePage/view/internal/internal"
 	"github.com/cjexp/front/master"
-	"github.com/cjtoolkit/ctx"
+	"github.com/cjtoolkit/ctx/v2"
 )
 
-func BuildIndexTemplate(context ctx.BackgroundContext) *template.Template {
+func BuildIndexTemplate(context ctx.Context) *template.Template {
 	return template.Must(master.CloneMasterTemplate(context).Parse(embedder.DecodeValueStr(internal.Index)))
 }

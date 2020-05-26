@@ -2,14 +2,14 @@ package controller
 
 import (
 	"github.com/cjexp/front/vueJsExp/view"
-	"github.com/cjtoolkit/ctx"
+	"github.com/cjtoolkit/ctx/v2"
 )
 
 type AlertController struct {
 	view view.AlertView
 }
 
-func NewAlertController(context ctx.BackgroundContext) AlertController {
+func NewAlertController(context ctx.Context) AlertController {
 	return AlertController{
 		view: view.NewAlertView(context),
 	}

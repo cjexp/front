@@ -4,7 +4,7 @@ import (
 	"github.com/cjexp/base/utility/router"
 	"github.com/cjexp/front/flashBagExp/controller"
 	"github.com/cjexp/front/urls"
-	"github.com/cjtoolkit/ctx"
+	"github.com/cjtoolkit/ctx/v2"
 )
 
 type bootFlashBagController struct {

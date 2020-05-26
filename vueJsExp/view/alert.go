@@ -5,16 +5,18 @@ package view
 import (
 	"html/template"
 
+	"github.com/cjtoolkit/ctx/v2/ctxHttp"
+
 	"github.com/cjexp/base/utility/loggers"
 	"github.com/cjexp/front/vueJsExp/view/internal"
-	"github.com/cjtoolkit/ctx"
+	"github.com/cjtoolkit/ctx/v2"
 )
 
 type AlertView interface {
 	ExecAlertView(context ctx.Context)
 }
 
-func NewAlertView(context ctx.BackgroundContext) AlertView {
+func NewAlertView(context ctx.Context) AlertView {
 	return alertView{
 		alertTemplate: internal.BuildViewAlertTemplate(context),
 		errorService:  loggers.GetErrorService(context),
@@ -27,6 +29,6 @@ type alertView struct {
 }
 
 func (a alertView) ExecAlertView(context ctx.Context) {
-	context.SetTitle("Vue Alert")
-	a.errorService.CheckErrorAndLog(a.alertTemplate.Execute(context.ResponseWriter(), context))
+	ctxHttp.SetTitle(context, "Vue Alert")
+	a.errorService.CheckErrorAndLog(a.alertTemplate.Execute(ctxHttp.Response(context), context))
 }

@@ -6,9 +6,10 @@
 package view
 
 import (
-	ctx "github.com/cjtoolkit/ctx"
-	gomock "github.com/golang/mock/gomock"
 	reflect "reflect"
+
+	ctx "github.com/cjtoolkit/ctx/v2"
+	gomock "github.com/golang/mock/gomock"
 )
 
 // MockAddressView is a mock of AddressView interface

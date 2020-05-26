@@ -5,16 +5,18 @@ package view
 import (
 	"html/template"
 
+	"github.com/cjtoolkit/ctx/v2/ctxHttp"
+
 	"github.com/cjexp/base/utility/loggers"
 	"github.com/cjexp/front/vueJsExp/view/internal"
-	"github.com/cjtoolkit/ctx"
+	"github.com/cjtoolkit/ctx/v2"
 )
 
 type AddressView interface {
 	ExecAddressView(context ctx.Context)
 }
 
-func NewAddressView(context ctx.BackgroundContext) AddressView {
+func NewAddressView(context ctx.Context) AddressView {
 	return addressView{
 		addressTemplate: internal.BuildViewAddressTemplate(context),
 		errorService:    loggers.GetErrorService(context),
@@ -27,6 +29,6 @@ type addressView struct {
 }
 
 func (a addressView) ExecAddressView(context ctx.Context) {
-	context.SetTitle("Vue Address Label Generator")
-	a.errorService.CheckErrorAndLog(a.addressTemplate.Execute(context.ResponseWriter(), context))
+	ctxHttp.SetTitle(context, "Vue Address Label Generator")
+	a.errorService.CheckErrorAndLog(a.addressTemplate.Execute(ctxHttp.Response(context), context))
 }

@@ -4,14 +4,14 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/cjtoolkit/ctx"
 	"github.com/cjexp/base/utility/command/param"
 	"github.com/cjexp/base/utility/router"
 	"github.com/cjexp/front/urls"
+	"github.com/cjtoolkit/ctx/v2"
 	"github.com/cjtoolkit/zipfs"
 )
 
-func Boot(context ctx.BackgroundContext) {
+func Boot(context ctx.Context) {
 	r := router.GetRouter(context)
 
 	if param.GetParam(context).Production == false {

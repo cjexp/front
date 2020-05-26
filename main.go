@@ -12,14 +12,14 @@ import (
 	"github.com/cjexp/front/flashBagExp"
 	"github.com/cjexp/front/homePage"
 	"github.com/cjexp/front/vueJsExp"
-	"github.com/cjtoolkit/ctx"
+	"github.com/cjtoolkit/ctx/v2"
 )
 
 var build = "Undefined"
 
 func boot() (http.Handler, param.Param) {
 	context := ctx.NewBackgroundContext()
-	defer ctx.ClearBackgroundContext(context)
+	defer ctx.ClearContext(context)
 
 	_param := param.GetParam(context)
 

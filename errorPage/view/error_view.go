@@ -5,12 +5,14 @@ package view
 import (
 	"html/template"
 
-	"github.com/cjtoolkit/ctx"
+	"github.com/cjtoolkit/ctx/v2/ctxHttp"
+
 	"github.com/cjexp/base/utility/embedder"
 	"github.com/cjexp/base/utility/loggers"
 	"github.com/cjexp/front/errorPage/model"
 	"github.com/cjexp/front/errorPage/view/internal"
 	"github.com/cjexp/front/master"
+	"github.com/cjtoolkit/ctx/v2"
 )
 
 type ErrorView interface {
@@ -22,7 +24,7 @@ type errorView struct {
 	errorTemplate *template.Template
 }
 
-func NewErrorView(context ctx.BackgroundContext) ErrorView {
+func NewErrorView(context ctx.Context) ErrorView {
 	return errorView{
 		errorService:  loggers.GetErrorService(context),
 		errorTemplate: buildErrorTemplate(context),
@@ -39,9 +41,9 @@ func (v errorView) ErrorTemplate(context ctx.Context, code int, title string, da
 		Local local
 	}
 
-	context.SetTitle(title)
+	ctxHttp.SetTitle(context, title)
 
-	res := context.ResponseWriter()
+	res := ctxHttp.Response(context)
 	res.WriteHeader(code)
 
 	err := v.errorTemplate.Execute(res, Context{
@@ -53,6 +55,6 @@ func (v errorView) ErrorTemplate(context ctx.Context, code int, title string, da
 	v.errorService.CheckErrorAndLog(err)
 }
 
-func buildErrorTemplate(context ctx.BackgroundContext) *template.Template {
+func buildErrorTemplate(context ctx.Context) *template.Template {
 	return template.Must(master.CloneMasterTemplate(context).Parse(string(embedder.DecodeValue(internal.Error))))
 }

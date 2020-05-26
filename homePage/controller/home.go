@@ -2,14 +2,14 @@ package controller
 
 import (
 	"github.com/cjexp/front/homePage/view"
-	"github.com/cjtoolkit/ctx"
+	"github.com/cjtoolkit/ctx/v2"
 )
 
 type HomeController struct {
 	view view.HomeView
 }
 
-func GetHomeController(context ctx.BackgroundContext) HomeController {
+func GetHomeController(context ctx.Context) HomeController {
 	return HomeController{view: view.NewHomeView(context)}
 }
 

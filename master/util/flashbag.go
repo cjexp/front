@@ -4,12 +4,12 @@ import (
 	"bytes"
 	"html/template"
 
-	"github.com/cjtoolkit/ctx"
 	"github.com/cjexp/base/utility/cookie"
 	"github.com/cjexp/base/utility/embedder"
 	"github.com/cjexp/base/utility/loggers"
 	"github.com/cjexp/front/master/internal"
 	internalMock "github.com/cjexp/front/master/util/internal"
+	"github.com/cjtoolkit/ctx/v2"
 )
 
 type flashbagTemplate struct {
@@ -36,7 +36,7 @@ func newFlashBag(errorService loggers.ErrorService, flashbagTemplate flashbagTem
 	}
 }
 
-func RegisterFlashBag(context ctx.BackgroundContext, m template.FuncMap) {
+func RegisterFlashBag(context ctx.Context, m template.FuncMap) {
 	_errorService := loggers.GetErrorService(context)
 	_flashBag := cookie.GetFlashBag(context)
 	_flashBagTemplate := newFlashTemplateTemplate()

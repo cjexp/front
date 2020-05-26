@@ -5,7 +5,7 @@ import (
 	"github.com/cjexp/base/utility/httpError"
 	"github.com/cjexp/front/flashBagExp/view"
 	"github.com/cjexp/front/urls"
-	"github.com/cjtoolkit/ctx"
+	"github.com/cjtoolkit/ctx/v2"
 )
 
 type FlashBagController struct {
@@ -13,7 +13,7 @@ type FlashBagController struct {
 	flashBag cookie.FlashBag
 }
 
-func NewFlashBagController(context ctx.BackgroundContext) FlashBagController {
+func NewFlashBagController(context ctx.Context) FlashBagController {
 	return FlashBagController{
 		view:     view.NewFlashBagView(context),
 		flashBag: cookie.GetFlashBag(context),

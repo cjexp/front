@@ -3,10 +3,10 @@ package vueJsExp
 import (
 	"github.com/cjexp/base/utility/router"
 	"github.com/cjexp/front/vueJsExp/controller"
-	"github.com/cjtoolkit/ctx"
+	"github.com/cjtoolkit/ctx/v2"
 )
 
-func Boot(context ctx.BackgroundContext) {
+func Boot(context ctx.Context) {
 	bootAddress{
 		addressController: controller.NewAddressController(context),
 		router:            router.GetRouter(context),
