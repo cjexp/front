@@ -8,5 +8,6 @@ import (
 
 type Vue struct{}
 
-func (_ Vue) Alert() template.HTMLAttr   { return urls.VueAlert }
-func (_ Vue) Address() template.HTMLAttr { return urls.VueAddress }
+func (_ Vue) Alert() template.HTMLAttr      { return urls.VueAlert }
+func (_ Vue) Address() template.HTMLAttr    { return urls.VueAddress }
+func (_ Vue) RandomHash() template.HTMLAttr { return urls.VueRandomHash }

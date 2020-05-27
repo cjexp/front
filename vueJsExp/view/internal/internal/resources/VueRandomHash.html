@@ -1,0 +1,16 @@
+{{ define "content" }}
+    <div id="vueRandomHash">
+        <p>If you are seeing this message, it's means you haven't got JavaScript Enabled</p>
+    </div>
+
+    <p class="d-print-none mt-5">
+        <a href="https://github.com/cjexp/front/tree/master/vueJsExp"><i class="fas fa-code"></i> Go Source Code</a>
+    </p>
+    <p class="d-print-none">
+        <a href="https://github.com/cjexp/front/tree/master/asset/dev/javascript/vue"><i class="fas fa-code"></i> Javascript Source Code</a>
+    </p>
+{{ end }}
+
+{{ define "javascript" }}
+    <script type="module" src="{{ urls.Files.Javascript "vue/randomHash.js" }}"></script>
+{{ end }}

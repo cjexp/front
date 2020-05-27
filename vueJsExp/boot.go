@@ -16,4 +16,9 @@ func Boot(context ctx.Context) {
 		alertController: controller.NewAlertController(context),
 		router:          router.GetRouter(context),
 	}.boot()
+
+	bootRandomHash{
+		controller: controller.NewRandomHashController(context),
+		router:     router.GetRouter(context),
+	}.boot()
 }

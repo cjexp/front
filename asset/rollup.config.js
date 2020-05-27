@@ -11,6 +11,7 @@ export default {
 
         'vue/address': 'dev/javascript/vue/address.js',
         'vue/alert': 'dev/javascript/vue/alert.js',
+        'vue/randomHash': 'dev/javascript/vue/randomHash.js',
     },
     output: {
         dir: 'live/javascript',

@@ -29,6 +29,6 @@ type addressView struct {
 }
 
 func (a addressView) ExecAddressView(context ctx.Context) {
-	ctxHttp.SetTitle(context, "Vue Address Label Generator")
+	ctxHttp.SetTitle(context, "Address Label Generator using VueJs")
 	a.errorService.CheckErrorAndLog(a.addressTemplate.Execute(ctxHttp.Response(context), context))
 }

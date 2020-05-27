@@ -29,6 +29,6 @@ type alertView struct {
 }
 
 func (a alertView) ExecAlertView(context ctx.Context) {
-	ctxHttp.SetTitle(context, "Vue Alert")
+	ctxHttp.SetTitle(context, "Alert using VueJs")
 	a.errorService.CheckErrorAndLog(a.alertTemplate.Execute(ctxHttp.Response(context), context))
 }

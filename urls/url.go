@@ -8,8 +8,9 @@ const (
 	FlashBagTest  = "/flashbag/test"
 
 	// Vue Experiment
-	VueAddress = "/vue/address"
-	VueAlert   = "/vue/alert"
+	VueAddress    = "/vue/address"
+	VueAlert      = "/vue/alert"
+	VueRandomHash = "/vue/hash"
 
 	// Files
 	FontsFiles      = "/fonts/*filepath"
