@@ -2,7 +2,7 @@ package controller
 
 import (
 	"crypto/rand"
-	"encoding/base64"
+	"encoding/hex"
 
 	"github.com/cjexp/base/utility/loggers"
 	"github.com/cjexp/front/vueJsExp/view"
@@ -31,7 +31,7 @@ func (c RandomHashController) FetchData(context ctx.Context) {
 		b := make([]byte, 32)
 		_, err := rand.Read(b)
 		c.errorService.CheckErrorAndPanic(err)
-		data[id] = base64.URLEncoding.EncodeToString(b)
+		data[id] = hex.EncodeToString(b)
 	}
 	c.view.ExecJsonString(context, data)
 }
