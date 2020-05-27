@@ -22,11 +22,11 @@
             }
         },
         mounted() {
-            generate(this)
+            generate(this);
         },
         methods: {
             generate() {
-                generate(this)
+                generate(this);
             }
         }
     }
