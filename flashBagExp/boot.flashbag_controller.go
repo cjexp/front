@@ -13,11 +13,11 @@ type bootFlashBagController struct {
 }
 
 func (b bootFlashBagController) boot() {
-	b.router.GET(urls.FlashBagIndex, func(context ctx.Context, params router.Params) {
+	b.router.GET(urls.FlashBagIndex, func(context ctx.Context) {
 		b.controller.Index(context)
 	})
 
-	b.router.GET(urls.FlashBagTest, func(context ctx.Context, params router.Params) {
+	b.router.GET(urls.FlashBagTest, func(context ctx.Context) {
 		b.controller.TestFlashBag(context)
 	})
 }

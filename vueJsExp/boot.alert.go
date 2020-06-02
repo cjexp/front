@@ -13,7 +13,7 @@ type bootAlert struct {
 }
 
 func (b bootAlert) boot() {
-	b.router.GET(urls.VueAlert, func(context ctx.Context, params router.Params) {
+	b.router.GET(urls.VueAlert, func(context ctx.Context) {
 		b.alertController.Index(context)
 	})
 }

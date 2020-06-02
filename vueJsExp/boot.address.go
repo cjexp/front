@@ -13,7 +13,7 @@ type bootAddress struct {
 }
 
 func (b bootAddress) boot() {
-	b.router.GET(urls.VueAddress, func(context ctx.Context, params router.Params) {
+	b.router.GET(urls.VueAddress, func(context ctx.Context) {
 		b.addressController.Index(context)
 	})
 }

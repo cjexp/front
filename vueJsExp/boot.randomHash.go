@@ -13,11 +13,11 @@ type bootRandomHash struct {
 }
 
 func (b bootRandomHash) boot() {
-	b.router.GET(urls.VueRandomHash, func(context ctx.Context, params router.Params) {
+	b.router.GET(urls.VueRandomHash, func(context ctx.Context) {
 		b.controller.Index(context)
 	})
 
-	b.router.PUT(urls.VueRandomHash, func(context ctx.Context, params router.Params) {
+	b.router.PUT(urls.VueRandomHash, func(context ctx.Context) {
 		b.controller.FetchData(context)
 	})
 }
