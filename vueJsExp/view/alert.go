@@ -17,7 +17,7 @@ type AlertView interface {
 }
 
 func NewAlertView(context ctx.Context) AlertView {
-	return alertView{
+	return &alertView{
 		alertTemplate: internal.BuildViewAlertTemplate(context),
 		errorService:  loggers.GetErrorService(context),
 	}
@@ -28,7 +28,7 @@ type alertView struct {
 	errorService  loggers.ErrorService
 }
 
-func (a alertView) ExecAlertView(context ctx.Context) {
+func (a *alertView) ExecAlertView(context ctx.Context) {
 	ctxHttp.SetTitle(context, "Alert using VueJs")
 	a.errorService.CheckErrorAndLog(a.alertTemplate.Execute(ctxHttp.Response(context), context))
 }

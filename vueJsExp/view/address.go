@@ -17,7 +17,7 @@ type AddressView interface {
 }
 
 func NewAddressView(context ctx.Context) AddressView {
-	return addressView{
+	return &addressView{
 		addressTemplate: internal.BuildViewAddressTemplate(context),
 		errorService:    loggers.GetErrorService(context),
 	}
@@ -28,7 +28,7 @@ type addressView struct {
 	errorService    loggers.ErrorService
 }
 
-func (a addressView) ExecAddressView(context ctx.Context) {
+func (a *addressView) ExecAddressView(context ctx.Context) {
 	ctxHttp.SetTitle(context, "Address Label Generator using VueJs")
 	a.errorService.CheckErrorAndLog(a.addressTemplate.Execute(ctxHttp.Response(context), context))
 }

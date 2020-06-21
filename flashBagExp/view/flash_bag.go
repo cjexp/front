@@ -17,7 +17,7 @@ type FlashBagView interface {
 }
 
 func NewFlashBagView(context ctx.Context) FlashBagView {
-	return flashBagView{
+	return &flashBagView{
 		indexTpl:     internal.BuildIndexPage(context),
 		errorService: loggers.GetErrorService(context),
 	}
@@ -28,7 +28,7 @@ type flashBagView struct {
 	errorService loggers.ErrorService
 }
 
-func (f flashBagView) ExecIndex(context ctx.Context) {
+func (f *flashBagView) ExecIndex(context ctx.Context) {
 	ctxHttp.SetTitle(context, "Flash Bag Test")
 
 	f.errorService.CheckErrorAndLog(f.indexTpl.Execute(ctxHttp.Response(context), context))

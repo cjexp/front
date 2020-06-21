@@ -18,7 +18,7 @@ type RandomHashView interface {
 }
 
 func NewRandomHashView(context ctx.Context) RandomHashView {
-	return randomHashView{
+	return &randomHashView{
 		hashViewTemplate: internal.BuildViewRandomHash(context),
 		errorService:     loggers.GetErrorService(context),
 	}
@@ -29,11 +29,11 @@ type randomHashView struct {
 	errorService     loggers.ErrorService
 }
 
-func (r randomHashView) ExecRandomHashView(context ctx.Context) {
+func (r *randomHashView) ExecRandomHashView(context ctx.Context) {
 	ctxHttp.SetTitle(context, "Random Hash using VueJs")
 	r.errorService.CheckErrorAndLog(r.hashViewTemplate.Execute(ctxHttp.Response(context), context))
 }
 
-func (r randomHashView) ExecJsonString(context ctx.Context, data []string) {
+func (r *randomHashView) ExecJsonString(context ctx.Context, data []string) {
 	r.errorService.CheckErrorAndLog(json.NewEncoder(ctxHttp.Response(context)).Encode(data))
 }

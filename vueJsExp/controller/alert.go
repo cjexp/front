@@ -9,12 +9,12 @@ type AlertController struct {
 	view view.AlertView
 }
 
-func NewAlertController(context ctx.Context) AlertController {
-	return AlertController{
+func NewAlertController(context ctx.Context) *AlertController {
+	return &AlertController{
 		view: view.NewAlertView(context),
 	}
 }
 
-func (c AlertController) Index(context ctx.Context) {
+func (c *AlertController) Index(context ctx.Context) {
 	c.view.ExecAlertView(context)
 }

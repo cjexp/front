@@ -8,7 +8,7 @@ import (
 )
 
 type bootAlert struct {
-	alertController controller.AlertController
+	alertController *controller.AlertController
 	router          router.Router
 }
 

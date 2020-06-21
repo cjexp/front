@@ -8,7 +8,7 @@ import (
 )
 
 type bootAddress struct {
-	addressController controller.AddressController
+	addressController *controller.AddressController
 	router            router.Router
 }
 

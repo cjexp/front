@@ -8,7 +8,7 @@ import (
 )
 
 type bootFlashBagController struct {
-	controller controller.FlashBagController
+	controller *controller.FlashBagController
 	router     router.Router
 }
 

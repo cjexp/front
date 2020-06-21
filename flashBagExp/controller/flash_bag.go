@@ -13,18 +13,18 @@ type FlashBagController struct {
 	flashBag cookie.FlashBag
 }
 
-func NewFlashBagController(context ctx.Context) FlashBagController {
-	return FlashBagController{
+func NewFlashBagController(context ctx.Context) *FlashBagController {
+	return &FlashBagController{
 		view:     view.NewFlashBagView(context),
 		flashBag: cookie.GetFlashBag(context),
 	}
 }
 
-func (c FlashBagController) Index(context ctx.Context) {
+func (c *FlashBagController) Index(context ctx.Context) {
 	c.view.ExecIndex(context)
 }
 
-func (c FlashBagController) TestFlashBag(context ctx.Context) {
+func (c *FlashBagController) TestFlashBag(context ctx.Context) {
 	fb := c.flashBag.GetFlashBag(context)
 
 	fb.Set("success", "Success 1")

@@ -8,7 +8,7 @@ import (
 )
 
 type bootRandomHash struct {
-	controller controller.RandomHashController
+	controller *controller.RandomHashController
 	router     router.Router
 }
 

@@ -14,18 +14,18 @@ type RandomHashController struct {
 	errorService loggers.ErrorService
 }
 
-func NewRandomHashController(context ctx.Context) RandomHashController {
-	return RandomHashController{
+func NewRandomHashController(context ctx.Context) *RandomHashController {
+	return &RandomHashController{
 		view:         view.NewRandomHashView(context),
 		errorService: loggers.GetErrorService(context),
 	}
 }
 
-func (c RandomHashController) Index(context ctx.Context) {
+func (c *RandomHashController) Index(context ctx.Context) {
 	c.view.ExecRandomHashView(context)
 }
 
-func (c RandomHashController) FetchData(context ctx.Context) {
+func (c *RandomHashController) FetchData(context ctx.Context) {
 	data := make([]string, 5)
 	for id, _ := range data {
 		b := make([]byte, 32)
