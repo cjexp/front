@@ -1,0 +1,9 @@
+#!/bin/bash
+cd $( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )
+
+ssh1="root@direct.cjjackson.dev"
+
+./doTest && ./build && \
+  scp bin/build/site "$ssh1:~/service/cjexp/app" && \
+  ssh $ssh1 "~/service/cjexp/testRun" && \
+  ssh $ssh1 "~/service/cjexp/syncService && echo success"

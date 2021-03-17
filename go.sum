@@ -1,7 +1,5 @@
 github.com/BurntSushi/toml v0.3.1 h1:WXkYYl6Yr3qBf1K79EBnL4mak0OimBfB0XUf9Vl28OQ=
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
-github.com/cjexp/base v0.0.0-20200602120154-720a44e16ca8 h1:3i+7U76liImjz/jt42XiJYKomCQRwDgNmeyaj9Ll2r0=
-github.com/cjexp/base v0.0.0-20200602120154-720a44e16ca8/go.mod h1:bAMRF8wCtgMt6v2wbM6XKKHieiAA9AvKgXtPrntlIyY=
 github.com/cjexp/base v0.0.0-20200621214845-51172380e742 h1:ti1STNMC614Px++rJq7f3nu8VCjNyfkdJ+ZV1659n4g=
 github.com/cjexp/base v0.0.0-20200621214845-51172380e742/go.mod h1:bAMRF8wCtgMt6v2wbM6XKKHieiAA9AvKgXtPrntlIyY=
 github.com/cjtoolkit/ctx/v2 v2.0.3 h1:+bUQ3YcJBGSsfuSGJIvqRlH4UveLOSzuXGOcPsF7+3I=
