@@ -31,13 +31,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fortawesome/fontawesome-free@npm:^5.13.0":
-  version: 5.13.0
-  resolution: "@fortawesome/fontawesome-free@npm:5.13.0"
-  checksum: 3/53f4c992a1feac188ae198a9c6fd18ac696022d30d5ebb044ae9013053d0e60e1b7bfe2f831c9a0114adf4accaa457a47023966a9dacf508ddbcbb20a027f719
-  languageName: node
-  linkType: hard
-
 "@rollup/plugin-json@npm:^4.0.3":
   version: 4.0.3
   resolution: "@rollup/plugin-json@npm:4.0.3"
@@ -427,22 +420,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bootstrap.native@https://github.com/thednp/bootstrap.native#9625a1423d863aeb7abb78e2e576c25dd46aaeee":
-  version: 3.0.0
-  resolution: "bootstrap.native@https://github.com/thednp/bootstrap.native#commit=9625a1423d863aeb7abb78e2e576c25dd46aaeee"
+"bootstrap.native@npm:^3.0.10":
+  version: 3.0.14
+  resolution: "bootstrap.native@npm:3.0.14"
   dependencies:
-    shorter-js: ^0.0.4
-  checksum: 3/9cd68fd84eea81c5d99c094b5188e254c7e4066d2cd0e4d22bbbe1d3db435f2758bc4ee738f98f73fbfb8204c14eed1b9becf14d301e4eed0e2e00f9feaf56f4
-  languageName: node
-  linkType: hard
-
-"bootstrap@npm:^4.4.1":
-  version: 4.4.1
-  resolution: "bootstrap@npm:4.4.1"
-  peerDependencies:
-    jquery: 1.9.1 - 3
-    popper.js: ^1.16.0
-  checksum: 3/6dd8f4c905c651619b93f9fde7b28131304f390ac276a61cc2ea64b38868e4a5cb71b144cca134b16fff0d518a73a75df2910eb734fd7ccafaad626466bd489c
+    minifill: ^0.0.8
+    shorter-js: ^0.1.7
+  checksum: 3/2f0e9ce5d1740ce6429494f8f831cbc72b776bb38229ebef98e4abde766a48fb5e267be9be8de3078ef17a255cd9ba51e4bc46df8b996a3ec681767b5fcb0129
   languageName: node
   linkType: hard
 
@@ -1750,6 +1734,13 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"minifill@npm:^0.0.8":
+  version: 0.0.8
+  resolution: "minifill@npm:0.0.8"
+  checksum: 3/f4bae025b9324c3d3f19bb1368da2acdab02a6d406edaa516460eed0cb7cc5e22b24b8a6fb60cda8db14413607d5bdd8af65ea36ba937a9e12b4f6908c4436df
+  languageName: node
+  linkType: hard
+
 "minimatch@npm:^3.0.4, minimatch@npm:~3.0.2":
   version: 3.0.4
   resolution: "minimatch@npm:3.0.4"
@@ -2788,10 +2779,10 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"shorter-js@npm:^0.0.4":
-  version: 0.0.4
-  resolution: "shorter-js@npm:0.0.4"
-  checksum: 3/b8df502aae149adca89c024288470c27c3dae4a8ab42924f532693531c3875c21f4a33adc6cc197b4564586d008ac0dac36620a73850bc083f8642fbc747793e
+"shorter-js@npm:^0.1.7":
+  version: 0.1.9
+  resolution: "shorter-js@npm:0.1.9"
+  checksum: 3/c01d60e47b1b28a387ee1a1d83c8915c9f1de47dbca68e9f4af96e5e3092ffcee9965a6efab92dfc69f2c2774174b02e30a72af47a10a3f353c23181693ece71
   languageName: node
   linkType: hard
 
@@ -2806,11 +2797,9 @@ fsevents@~2.1.2:
   version: 0.0.0-use.local
   resolution: "site@workspace:."
   dependencies:
-    "@fortawesome/fontawesome-free": ^5.13.0
     "@rollup/plugin-json": ^4.0.3
     "@rollup/plugin-replace": ^2.3.2
-    bootstrap: ^4.4.1
-    bootstrap.native: "https://github.com/thednp/bootstrap.native#9625a1423d863aeb7abb78e2e576c25dd46aaeee"
+    bootstrap.native: ^3.0.10
     node-sass: ^4.13.1
     postcss: ^7.0.27
     rollup: ^2.6.1
@@ -2820,11 +2809,6 @@ fsevents@~2.1.2:
     rollup-plugin-vue: ^5.1.6
     vue: ^2.6.11
     vue-template-compiler: ^2.6.11
-  dependenciesMeta:
-    "@fortawesome/fontawesome-free":
-      unplugged: true
-    bootstrap:
-      unplugged: true
   languageName: unknown
   linkType: soft
 

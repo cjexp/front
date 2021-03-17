@@ -1,0 +1,6 @@
+[submodule "asset/module/bootstrap"]
+	path = asset/module/bootstrap
+	url = https://github.com/twbs/bootstrap.git
+[submodule "asset/module/fontawesome"]
+	path = asset/module/fontawesome
+	url = git@github.com:CJ-Jackson/fa.git

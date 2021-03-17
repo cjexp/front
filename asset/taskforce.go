@@ -17,7 +17,7 @@ func initTask() *taskforce.TaskForce {
 
 	tf.Register("yarn", func() {
 		tf.ExecCmd("gnode", "yarn")
-		tf.ExecCmd("./createLink")
+		//tf.ExecCmd("./createLink")
 	})
 
 	tf.Register("clean", func() {
@@ -60,7 +60,7 @@ func initTask() *taskforce.TaskForce {
 	tf.Register("copy", func() {
 		copyFolder := task.CopyFolder(tf)
 
-		copyFolder("live/fonts", "link/fontawesome/webfonts")
+		copyFolder("live/fonts", "module/fontawesome/webfonts")
 	})
 
 	tf.Register("zip", func() {

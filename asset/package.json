@@ -1,11 +1,9 @@
 {
   "name": "site",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.13.0",
     "@rollup/plugin-json": "^4.0.3",
     "@rollup/plugin-replace": "^2.3.2",
-    "bootstrap": "^4.4.1",
-    "bootstrap.native": "https://github.com/thednp/bootstrap.native#9625a1423d863aeb7abb78e2e576c25dd46aaeee",
+    "bootstrap.native": "^3.0.10",
     "node-sass": "^4.13.1",
     "postcss": "^7.0.27",
     "rollup": "^2.6.1",
@@ -15,13 +13,5 @@
     "rollup-plugin-vue": "^5.1.6",
     "vue": "^2.6.11",
     "vue-template-compiler": "^2.6.11"
-  },
-  "dependenciesMeta": {
-    "@fortawesome/fontawesome-free": {
-      "unplugged": true
-    },
-    "bootstrap": {
-      "unplugged": true
-    }
   }
 }
