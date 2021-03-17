@@ -3,4 +3,4 @@
 	url = https://github.com/twbs/bootstrap.git
 [submodule "asset/module/fontawesome"]
 	path = asset/module/fontawesome
-	url = git@github.com:CJ-Jackson/fa.git
+	url = https://github.com/FortAwesome/Font-Awesome.git
