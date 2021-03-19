@@ -3,7 +3,10 @@
   "dependencies": {
     "@rollup/plugin-json": "^4.0.3",
     "@rollup/plugin-replace": "^2.3.2",
+    "@vue/compiler-sfc": "^3.0.7",
     "bootstrap.native": "^3.0.10",
+    "esbuild": "^0.9.5",
+    "esbuild-plugin-vue": "^0.1.2",
     "postcss": "^7.0.27",
     "rollup": "^2.6.1",
     "rollup-plugin-commonjs": "^10.1.0",
@@ -13,5 +16,8 @@
     "sass": "^1.32.8",
     "vue": "^2.6.11",
     "vue-template-compiler": "^2.6.11"
+  },
+  "scripts": {
+    "build": " node ./build.mjs"
   }
 }
