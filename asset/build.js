@@ -1,8 +1,7 @@
-import build from 'esbuild';
-import vuePlugin from 'esbuild-vue';
+const vuePlugin = require('esbuild-vue');
 
-build({
-    entryPoints: ['dev/javascript/main.js'],
+require('esbuild').build({
+    entryPoints: ['dev/javascript/main.mjs'],
     bundle: true,
     plugins: [vuePlugin()],
     outfile: 'live/javascript/main.js',

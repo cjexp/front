@@ -18,6 +18,5 @@
   },
   "scripts": {
     "build": " node build.js"
-  },
-  "type": "module"
+  }
 }
